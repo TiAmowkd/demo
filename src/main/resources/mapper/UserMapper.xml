@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.UserMapper">
+
+    <select id="selectAllRow" resultType="string">
+        SELECT column_name
+        FROM information_schema.columns
+        WHERE table_schema='login' AND table_name='user';
+    </select>
+
+    <!--@Select("select * from user where ${column} = #{value}")
+    OptionalUser findByColumn(@Param("column") String column, @Param("value") String value);-->
+    <!--<select id="selectAllRow" resultType="string">
+        SELECT
+
+        FROM information_schema.columns
+        WHERE table_schema='login' AND table_name='user';
+    </select>-->
+
+
+</mapper>
